@@ -1,7 +1,7 @@
-/* CSS BY YOUR NAME */
+/* CSS BY Belen Estrada */
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -63,18 +63,231 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
+body {
+    font-family: "Inter";
+    min-width: 400px;
+    line-height: 1.5em;
+    background: linear-gradient(
+        #EAEAEA 55.5%,
+        #007BFF 55.5% 78.5%,
+        #000000 78.5%);
+}
+header { 
+    background-color: var(--black); 
+    border-bottom: 2px solid blue; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+h1 {
+    color: #007BFF; 
+    font-size: 1.8em;
+    font-weight: bold; 
+    margin-top: 1em;
+    margin-bottom: .5em;
+    margin-left: .5em;
+} 
+h2 {
+    font-size: 1.5em;
+}
+h2, h3 {
+    text-indent: 15px;
+    font-weight: bold;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+/*Hamburger Menu*/
+nav {
+    background-color: #000000; 
+}
+nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+    max-height: 0;
+}
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+}
+nav li a {
+    display: block;
+    font-family: sans-serif;
+    font-size: 1em;
+    padding: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration:none;
+    color: var(--blue);
+    transition: background-color .3s ease-in;
+}
+nav a:hover, nav input:hover {
+    background-color: var(--blue);
+    color: var(--black);
+}
+nav label {
+    cursor: default; 
+    float: right;
+    user-select: none;
+    padding: 1.5em;
+}
+label span {
+    background-color:#EAEAEA;
+    display: block;
+    height: .25em;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2em;
+}
+label span:before, label span:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: .75rem;
+}
+label span:after {
+    top: -.75rem;
+}
+#menu-toggle {
+    display:none;
+}
+#menu-toggle:checked ~ ul {
+    max-height: 500px; 
+}
+/*Table Styles*/
+table {
+    width: 100%;
+    color: var(--white);
+    background-color: #007BFF;
+}
+table, th, td {
+    border: 1px solid var(--charcoal);
+    padding: 8px;
+    border-collapse: collapse;
+    text-align: center; 
+}
+th {
+    background-color: #000000;
+}
+tr:nth-child(odd) {
+    background-color: var(--charcoal);
+}
+tr:nth-child(even) {
+    background-color: #000000;
+} 
+.graphs h2, .graphs h3{
+    font-size: 1.5em;
+    color: var(--white);
+}
+.graphs h2 {
+    padding-top: 2em;
+}
+.graphs p {
+    color: var(--white);
+}
+ h2.results, .results ~ p {
+    color: var(--white);
+}
+/*Forms styles*/
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid var(--blue); 
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: var(--blue);
+    padding: 1em;
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: default;
+    color: var(--white);
+    margin-bottom: 2em;
+  }
+  input[type=submit]:hover {
+    background-color: var(--red);
+  } 
+form {
+    color: var(--white);
+}
+form h2 {
+    margin-top: 50px;
+}
+textarea {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%; 
+    border: 2px solid var(--blue)
+}
+/*Footer*/
+footer {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 2em;
+}
+/*Blue Boxes Styles*/
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    margin-bottom: 2em;
+}
+#blueBox, #blueBox1, #blueBox2, #blueBox3, #blueBox4, #blueBox5 {
+    margin-bottom: 1em;
+    background-color: #007BFF;
+    border-radius: .5em;
+    padding: 1em;
+    transition: 0.5s;
+}
+#blueBox:hover, #blueBox1:hover, #blueBox2:hover, #blueBox3:hover, #blueBox4:hover, #blueBox5:hover {
+    transform: translateY(-10px);
+}
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
-
+h2, h3, .Request { 
+    animation-delay: 1s;
+    animation: titleDelay 12s ; 
+}
+@keyframes titleDelay {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    20% {
+        opacity: 0;
+    }
+    30%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }    
+}
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+ 
+.innovationANDinvestment {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -82,19 +295,41 @@ table {
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+
+    color: var(--white);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.Request {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--white);
+    background-color: #007BFF;
+    border-radius: 1em; 
+    padding: 15px;
+    grid-row: 5;
+}
+.Request:hover {
+    background-color: var(--red);
+}
+.innovationANDinvestment h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    grid-row: 3;
+}
+.innovationANDinvestment p {
+    grid-row: 4;
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+ h1::before{
     content: "";
-
+    float: left;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
-}
-/* THIS ONE IS DONE FOR YOU */
+} 
+/* THIS ONE IS DONE FOR YOU - removed padding 1rem*/
 #bar-chart {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -103,8 +338,8 @@ table {
     gap: 1rem;
     height: 300px;
     width: 100%;
+    padding: .5rem;
     max-width: 800px;
-    padding: 1rem;
     position: relative;
 }
 /* ADD ON TRANSITION ON HEIGHT */
@@ -113,7 +348,7 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 0.5s ease-in;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -138,11 +373,45 @@ table {
 /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
 .bar {
     animation: stepUp 1s ease-in-out forwards;
-}
-
-
+} 
 /* MEDIA QUERIES (MEDIUM) */ 
+@media screen and (min-width:800px) {
+    body {background: linear-gradient(
+        #EAEAEA 0% 55%,
+        #007BFF 55% 73%,
+        #000000 73%);
+    } 
+    .wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; 
+        grid-column-gap: 20px;
+    }
+    .graphs {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
+    table {
+        grid-row: 2; 
+    }
+    nav ul {
+        overflow:visible;
+        position:absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        text-align: right;
+        display: flex;
+        justify-content: end; 
+      } 
+      nav li a {
+        display:inline-block;
+    }
+      label span, .menu-toggle {
+        display:none;
+      }
+    }
 
+/*Style below was there already so not sure if it's alrright to delete it or hide it in this comment*/    
     #results {
         grid-template-columns: 1fr 1fr;
     }
@@ -156,6 +425,66 @@ table {
     .bar-chart {
         width: 50%;
     }
-
-
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width:1024px) { 
+    body {background: linear-gradient(
+        #EAEAEA 0% 56.8%,
+        #007BFF 56.8% 75.5%,
+        #000000 74.5%);
+    }
+    .wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 2em; 
+    }
+    /*Form Styles*/
+    form p {
+        padding-bottom: 1.5em;
+    }
+    .formContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 1.5em; 
+    } 
+    #fname {
+        grid-row : 2; 
+    }
+    #email1 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #email {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    #companyname1 {
+        grid-column: 1;
+        grid-row:3;
+    }
+    #companyname {
+        grid-column:1;
+        grid-row: 4;
+    }
+    #industry1 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    #industry {
+        grid-column: 2;
+        grid-row: 4;
+    }
+    #addInfo1 {
+        grid-column: 1;
+        grid-row:5;
+    }
+    #addInfo {
+        grid-column: 1;
+        grid-row: 6;
+    }
+    input[type=submit] {
+        grid-column: 2;
+        grid-row:6; 
+    }
+}
