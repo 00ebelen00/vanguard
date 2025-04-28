@@ -35,8 +35,10 @@
     </section>
 
     <div class="container">
-        <h2>Our Expertise. Your Edge.</h2>
-        <p>We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'</p>
+        <section>
+            <h2>Our Expertise. Your Edge.</h2>
+            <p>We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'</p>
+        </section>
 
         <h2>What We Offer</h2>
         <div class="wrapper">
@@ -70,49 +72,57 @@
             </section>
         </div>
 
-        <h2 class="results">Proven Results</h2>
-        <p>Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
-        <section class="graphs">
+        <section id="results">
+            <h2>Proven Results</h2>
+            <p>Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
+        </section>
 
+        <div class="results-container">
+            <section id="tableResults">
             <h3>Profits</h3>
-            <table>
-                <tr>
-                    <th>Year</th>
-                    <th>Revenue ($M)</th>
-                    <th>Growth (%)</th>
+            <table> 
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Revenue ($M)</th>
+                        <th>Growth (%)</th>
                 </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2020</td>
+                        <td>$120M</td>
+                        <td>30%</td>
+                    </tr>
 
-                <tr>
-                    <td>2020</td>
-                    <td>$120M</td>
-                    <td>30%</td>
-                </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>$180M</td>
+                        <td>50%</td>
+                    </tr>
 
-                <tr>
-                    <td>2021</td>
-                    <td>$180M</td>
-                    <td>50%</td>
-                </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>$250M</td>
+                        <td>70%</td>
+                    </tr>
 
-                <tr>
-                    <td>2022</td>
-                    <td>$250M</td>
-                    <td>70%</td>
-                </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>$340M</td>
+                        <td>85%</td>
+                    </tr>
 
-                <tr>
-                    <td>2023</td>
-                    <td>$340M</td>
-                    <td>85%</td>
-                </tr>
-
-                <tr>
-                    <td>2024</td>
-                    <td>$420M</td>
-                    <td>100%</td>
-                </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>$420M</td>
+                        <td>100%</td>
+                    </tr>
+                </tbody>
             </table>
+            </section>
 
+        <section id="barResults">
             <h3>Growth</h3>
     <!-- CODE PROVIDED FOR YOU, NOTHING TO DO FOR THE BAR CHART IN THE HTML-->
                     <div  id="bar-chart">
@@ -122,12 +132,15 @@
                         <div class="bar" data-year="2023" style="--height: 85%;"></div>
                         <div class="bar" data-year="2024" style="--height: 100%;"></div>
                     </div>
+        </section> 
+    </div>
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
         </section>
 
-        <form>
-        <h2>Contact Us</h2>
-        <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
-        <div class="formContainer">
+        <form> 
             <label for="fname">Full Name</label><br>
             <input type="text" id="fname" name="fname">
             <br>
@@ -142,10 +155,9 @@
             <br>
             <label for="addInfo" id="addInfo1">How can we help you?</label><br>
             <textarea id="addInfo" cols="30" rows="5"></textarea>
-            <input type="submit" value="Submit">
-        </div>
+            <input type="submit" value="Submit"> 
         </form> 
-    </div>
+
         <footer>
             <p>&copy; 2025 Vanguard. All rights reserved.</p>
             <address>

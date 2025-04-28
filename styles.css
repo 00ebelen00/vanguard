@@ -71,12 +71,12 @@ body {
     line-height: 1.5em;
     background: linear-gradient(
         #EAEAEA 55.5%,
-        #007BFF 55.5% 78.5%,
-        #000000 78.5%);
+        #007BFF 55.5% 78%,
+        #000000 78%); 
 }
 header { 
     background-color: var(--black); 
-    border-bottom: 2px solid blue; 
+    border-bottom: 2px solid var(--blue); 
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,7 +92,7 @@ h1 {
     margin-left: .5em;
 } 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 h2, h3 {
     text-indent: 15px;
@@ -167,90 +167,12 @@ label span:after {
 #menu-toggle:checked ~ ul {
     max-height: 500px; 
 }
-/*Table Styles*/
-table {
-    width: 100%;
-    color: var(--white);
-    background-color: #007BFF;
-}
-table, th, td {
-    border: 1px solid var(--charcoal);
-    padding: 8px;
-    border-collapse: collapse;
-    text-align: center; 
-}
-th {
-    background-color: #000000;
-}
-tr:nth-child(odd) {
-    background-color: var(--charcoal);
-}
-tr:nth-child(even) {
-    background-color: #000000;
-} 
-.graphs h2, .graphs h3{
-    font-size: 1.5em;
-    color: var(--white);
-}
-.graphs h2 {
-    padding-top: 2em;
-}
-.graphs p {
-    color: var(--white);
-}
- h2.results, .results ~ p {
-    color: var(--white);
-}
-/*Forms styles*/
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 2px solid var(--blue); 
-    box-sizing: border-box;
-  }
-  
-  input[type=submit] {
-    width: 100%;
-    background-color: var(--blue);
-    padding: 1em;
-    margin-top: 2em;
-    font-weight: bold;
-    font-size: 1em;
-    border: none;
-    border-radius: 4px;
-    cursor: default;
-    color: var(--white);
-    margin-bottom: 2em;
-  }
-  input[type=submit]:hover {
-    background-color: var(--red);
-  } 
-form {
-    color: var(--white);
-}
-form h2 {
-    margin-top: 50px;
-}
-textarea {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 100%; 
-    border: 2px solid var(--blue)
-}
-/*Footer*/
-footer {
-    color: var(--white);
-    text-align: center;
-    margin-bottom: 2em;
-}
 /*Blue Boxes Styles*/
 .wrapper{
     display: flex;
     flex-direction: column;
     color: var(--white);
-    margin-bottom: 2em;
+    margin-bottom: 3.5em;
 }
 #blueBox, #blueBox1, #blueBox2, #blueBox3, #blueBox4, #blueBox5 {
     margin-bottom: 1em;
@@ -261,6 +183,9 @@ footer {
 }
 #blueBox:hover, #blueBox1:hover, #blueBox2:hover, #blueBox3:hover, #blueBox4:hover, #blueBox5:hover {
     transform: translateY(-10px);
+}
+.wrapper h3 { 
+    font-size: 1.1em;
 }
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
@@ -373,27 +298,99 @@ h2, h3, .Request {
 /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
 .bar {
     animation: stepUp 1s ease-in-out forwards;
+}
+/*Table Styles*/
+table {
+    width: 100%;
+    color: var(--white); 
+}
+table, th, td {
+    border: 1px solid var(--charcoal);
+    padding: 8px;
+    border-collapse: collapse;
+    text-align: center; 
+}
+th {
+    background-color: #000000;
+}
+tr:nth-child(even) {
+    background-color: var(--charcoal);
+}
+tr:nth-child(odd) {
+    background-color: #000000;
 } 
+#results, #tableResults, #barResults{ 
+    color: var(--white);
+} 
+.results-container h3 {
+    font-size: 1.5em;
+} 
+/*Forms styles*/
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid var(--blue); 
+    box-sizing: border-box;
+  }
+  input[type=submit] {
+    width: 100%;
+    background-color: var(--blue);
+    padding: 1em;
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: default;
+    color: var(--white);
+    margin-bottom: 2em;
+  }
+  input[type=submit]:hover {
+    background-color: var(--red);
+  } 
+form, .contact {
+    color: var(--white);
+    padding-bottom: 1.5em;
+} 
+textarea {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%; 
+    border: 2px solid var(--blue)
+} 
+.contact {
+    padding-top: 2.3em;
+}
+/*Footer*/
+footer {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 2em;
+}
+
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width:800px) {
     body {background: linear-gradient(
-        #EAEAEA 0% 55%,
-        #007BFF 55% 73%,
-        #000000 73%);
+        #EAEAEA 0% 53%,
+        #007BFF 53% 72.5%,
+        #000000 72.5%);
     } 
-    .wrapper {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr; 
-        grid-column-gap: 20px;
+    .innovationANDinvestment h2 {
+        font-size: 2em
     }
-    .graphs {
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
+    .innovationANDinvestment p {
+        padding-left: 5em;
+        padding-right: 5em;
     }
-    table {
-        grid-row: 2; 
+    h2 {
+        font-size: 2em;
     }
+    h3 {
+        font-size: 1.2em; 
+    } 
+    /*Nav Styles*/
     nav ul {
         overflow:visible;
         position:absolute;
@@ -406,46 +403,67 @@ h2, h3, .Request {
       nav li a {
         display:inline-block;
     }
+    nav li {
+        font-size: 1.2em;
+    }
       label span, .menu-toggle {
         display:none;
       }
+    .wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; 
+        grid-column-gap: 20px;
+    }
+    /*Data Styles*/
+    .results-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .results-container h3 {
+        font-size: 1.8em;
+    }
+    .barResults {
+        width: 50%; 
+    }
+    table, th, td { 
+        padding: 18px; 
+    }
     }
 
 /*Style below was there already so not sure if it's alrright to delete it or hide it in this comment*/    
     #results {
         grid-template-columns: 1fr 1fr;
-    }
-    .results-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .results-table {
-        width: 50%;
-    }
-    .bar-chart {
-        width: 50%;
-    }
+    } 
 /* MEDIA QUERIES (LARGE) */
 @media screen and (min-width:1024px) { 
     body {background: linear-gradient(
-        #EAEAEA 0% 56.8%,
-        #007BFF 56.8% 75.5%,
-        #000000 74.5%);
-    }
+        #EAEAEA 0% 54%,
+        #007BFF 54% 74%,
+        #000000 74%);
+    } 
     .wrapper {
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         padding-bottom: 2em; 
     }
-    /*Form Styles*/
-    form p {
+    .results-container {
         padding-bottom: 1.5em;
     }
-    .formContainer {
+    #tableResults {
+       width: 50%;
+    }
+    /*Form Styles*/
+
+    .contact p {
+        padding-bottom: 1.5em;
+    }
+    form {
+        font-size: 1.1em;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr; 
         grid-column-gap: 1.5em; 
     } 
     #fname {
@@ -487,4 +505,7 @@ h2, h3, .Request {
         grid-column: 2;
         grid-row:6; 
     }
+    #bar-chart { 
+        gap: 2.5rem; 
+    } 
 }
