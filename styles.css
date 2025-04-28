@@ -70,8 +70,8 @@ body {
     min-width: 400px;
     line-height: 1.5em;
     background: linear-gradient(
-        #EAEAEA 55.5%,
-        #007BFF 55.5% 78%,
+        #EAEAEA 54.5%,
+        #007BFF 54.5% 78%,
         #000000 78%); 
 }
 header { 
@@ -171,8 +171,7 @@ label span:after {
 .wrapper{
     display: flex;
     flex-direction: column;
-    color: var(--white);
-    margin-bottom: 3.5em;
+    color: var(--white); 
 }
 #blueBox, #blueBox1, #blueBox2, #blueBox3, #blueBox4, #blueBox5 {
     margin-bottom: 1em;
@@ -325,6 +324,9 @@ tr:nth-child(odd) {
 .results-container h3 {
     font-size: 1.5em;
 } 
+#results {
+    padding-top: 5em;
+}
 /*Forms styles*/
 input[type=text] {
     width: 100%;
