@@ -68,11 +68,25 @@ table {
 body {
     font-family: "Inter";
     min-width: 400px;
-    line-height: 1.5em;
-    background: linear-gradient(
-        #EAEAEA 54.5%,
-        #007BFF 54.5% 78%,
-        #000000 78%); 
+    line-height: 1.5em; 
+} 
+#results::before, .results-container::before{
+    position:absolute;
+    left: 0;
+    content: "";
+    background-color: #007BFF;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+form::before, .contact::before {
+    position: absolute; 
+    left: 0;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    content: "";
 }
 header { 
     background-color: var(--black); 
@@ -374,11 +388,7 @@ footer {
 
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width:800px) {
-    body {background: linear-gradient(
-        #EAEAEA 0% 53%,
-        #007BFF 53% 72%,
-        #000000 72%);
-    } 
+
     .innovationANDinvestment h2 {
         font-size: 2em
     }
@@ -440,20 +450,13 @@ footer {
     } 
 /* MEDIA QUERIES (LARGE) */
 @media screen and (min-width:1024px) { 
-    body {background: linear-gradient(
-        #EAEAEA 0% 54%,
-        #007BFF 54% 74%,
-        #000000 74%);
-    } 
+
     .wrapper {
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         padding-bottom: 2em; 
-    }
-    .results-container {
-        padding-bottom: 1.5em;
-    }
+    } 
     #tableResults {
        width: 50%;
     }
