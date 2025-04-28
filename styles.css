@@ -376,8 +376,8 @@ footer {
 @media screen and (min-width:800px) {
     body {background: linear-gradient(
         #EAEAEA 0% 53%,
-        #007BFF 53% 72.5%,
-        #000000 72.5%);
+        #007BFF 53% 72%,
+        #000000 72%);
     } 
     .innovationANDinvestment h2 {
         font-size: 2em
